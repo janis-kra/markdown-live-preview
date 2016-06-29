@@ -1,0 +1,24 @@
+{
+  "name": "markdown-live-preview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janis-kra/markdown-live-preview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janis-kra/markdown-live-preview/issues"
+  },
+  "homepage": "https://github.com/janis-kra/markdown-live-preview#readme",
+  "devDependencies": {
+    "babel-eslint": "^6.1.0",
+    "eslint": "2.8.0",
+    "eslint-plugin-react": "5.0.1"
+  }
+}
