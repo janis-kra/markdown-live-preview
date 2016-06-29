@@ -1,12 +1,19 @@
+const Editor = React.createClass({
+  render: function () {
+    return (
+      <textarea>your text here</textarea>
+    );
+  }
+});
 
-
-/**
- * Factory function for the app
- * @return {React} the React object (I'll only need one this way!)
- */
 const App = React.createClass({
   render: function () {
-    return (<h1>Yet another markdown live preview thingy...</h1>);
+    return (
+      <div>
+        <h1>Yet another markdown live preview thingy...</h1>
+        <Editor />
+      </div>
+    );
   }
 });
 
