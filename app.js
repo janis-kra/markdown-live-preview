@@ -1,7 +1,29 @@
 const Editor = React.createClass({
+  getInitialState: function () {
+    return { value: '' };
+  },
+  handleChange: function (event) {
+    const text = event.target.value;
+    let p;
+    if (text.startsWith('**') && text.endsWith('**')) {
+      p = <p className='bold'>{text}</p>;
+    } else if (text.startsWith('*') && text.endsWith('*')) {
+      p = <p className='italic'>{text}</p>;
+    } else {
+      p = <p className='normal'>{text}</p>;
+    }
+    this.setState({ value: p });
+  },
   render: function () {
     return (
-      <textarea>your text here</textarea>
+      <div>
+        <textarea
+          placeholder='your text here'
+          onChange={this.handleChange} />
+        <div>
+          { this.state.value }
+        </div>
+      </div>
     );
   }
 });
