@@ -1,10 +1,11 @@
 const defaultText = '*italic*, **bold**, `monospace`, ~~strikethrough~~ .';
 
-const Editor = ({ handleChange }) => (
+const Editor = ({ text, handleChange }) => (
   <textarea
     className='editor'
     placeholder='your text here'
-    onChange={handleChange} />
+    onChange={handleChange}
+    value={text}/>
 );
 
 const Preview = ({ markdown }) => (
@@ -28,7 +29,7 @@ const App = React.createClass({
     return (
       <div>
         <h1>Markdown Live Preview</h1>
-        <Editor handleChange={this.handleChange} />
+        <Editor text={this.state.text} handleChange={this.handleChange} />
         <Preview markdown={this.state.markdown} />
       </div>
     );

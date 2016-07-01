@@ -14,11 +14,17 @@ $inactive: #737373
 
 div#app
   margin: 0 10px
+  width: 100%
+
+  .editor, .preview
+    display: inline-block
+    width: 50%
+    vertical-align: top
+    margin: 0
 
   .editor
     @include box-shadow(5px, $inactive)
     @include border-radius(5px)
-    width: 100%
     height: $h
     padding: 5px
 
@@ -26,5 +32,5 @@ div#app
       @include box-shadow(5px, $active)
 
   .preview
-    width: inherit
-    margin-top: 10px
+    min-height: $h
+    padding: 10px
