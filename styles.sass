@@ -1,5 +1,30 @@
-.bold
-  font-weight: bold
+$h: 200px
+$active: #468FE3
+$inactive: #737373
 
-.italic
-  font-style: italic
+@mixin box-shadow($blur: 5px, $col: rgba(0,0,0,0.75), $length: 0px, $spread: 0px)
+  -webkit-box-shadow: $length $length $blur $spread $col
+  -moz-box-shadow: $length $length $blur $spread $col
+  box-shadow: $length $length $blur $spread $col
+
+@mixin border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+div#app
+  margin: 0 10px
+
+  .editor
+    @include box-shadow(5px, $inactive)
+    @include border-radius(5px)
+    width: 100%
+    height: $h
+    padding: 5px
+
+    &:active, &:focus
+      @include box-shadow(5px, $active)
+
+  .preview
+    width: inherit
+    margin-top: 10px
